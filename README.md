@@ -1,1 +1,1 @@
-These are all the resolusions for the problem sets and the final project for the cs50 introduction to computer science course.
+These are all the resolusions of the problem sets and the final project for the cs50 introduction to computer science course. There's also some examples based off the classes.
