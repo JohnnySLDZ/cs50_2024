@@ -1,0 +1,9 @@
+-If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+--I would average the energy, valence, and danceability from this person's top 100 songs and then assign characteristics to their aura based on the results of
+these averages.
+
+-Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+
+--I don't think that looking only at the averages of these three characteristics of a song can define correctly the audio aura of a person, i would look also at the
+genres of each song and the frequency the person has listened each one to have a bigger and more realistic view of this person's audio aura.

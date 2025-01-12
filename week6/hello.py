@@ -1,0 +1,5 @@
+print("hello, world")
+mv= input("What's your name?\n")
+print("hello, " + answer)
+print("hello,", answer)
+print(f"hello, {answer}")

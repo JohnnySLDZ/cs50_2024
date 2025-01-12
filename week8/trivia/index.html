@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            var part1Try = false;
+            document.addEventListener('DOMContentLoaded', function(){
+                let buttons = document.querySelectorAll('.part1');
+                let retryButton = document.querySelector('#retry');
+                let answer_status = document.querySelector('#answer1');
+
+                for(let i = 0; i < buttons.length; i++){
+                    buttons[i].addEventListener('click', function(event){
+                        let button = event.target;
+                        let answer = button.innerHTML;
+                        if(!part1Try){
+                            if(answer == 'Jupiter'){
+                                button.style.backgroundColor = '#5cff8a';
+                                answer_status.innerHTML = 'Correct';
+                            }
+                            else{
+                                button.style.backgroundColor = '#ff5c5c';
+                                answer_status.innerHTML = 'Incorrect';
+                            }
+                        }
+                        part1Try = true;
+                        retryButton.style.display = 'inline-block';
+                    });
+                }
+
+                retryButton.addEventListener('click', function(){
+                    part1Try = false;
+                    for(let i = 0; i < buttons.length; i++){
+                        if(buttons[i].style.backgroundColor){
+                            buttons[i].style.backgroundColor = '';
+                        }
+                    }
+                    answer_status.innerHTML = '';
+                    retryButton.style.display = 'none';
+                });
+            });
+
+            function part2(){
+                let input = document.querySelector('#part2Input');
+                let answer = input.value;
+                if (answer.toLowerCase() == 'oxygen') {
+                    input.style.backgroundColor = '#5cff8a';
+                    document.querySelector('#answer2').innerHTML = 'Correct';
+                    document.querySelector('#answer2_2').innerHTML = 'Right Answer: Oxygen';
+                }
+                else{
+                    input.style.backgroundColor = '#ff5c5c';
+                    document.querySelector('#answer2').innerHTML = 'Incorrect';
+                    document.querySelector('#answer2_2').innerHTML = '';
+                }
+                input.value = '';
+            }
+
+            // TODO: Add code to check answers to questions
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the largest planet in our Solar System?</h3>
+                <p id="answer1" class="answer_section"></p>
+                <button class="part1">Earth</button>
+                <button class="part1">Mars</button>
+                <button class="part1">Venus</button>
+                <button class="part1">Jupiter</button>
+                <button class="part1">Saturn</button>
+                <button class="part1">Neptune</button>
+                <button id="retry">Retry</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which element has the chemical symbol "O"?</h3>
+                <form onsubmit="part2(); return false;">
+                    <input type="text" name="" id="part2Input" autocomplete="off">
+                    <input type="submit" value="Confirm">
+                </form>
+                <p id="answer2" class="answer_section"></p>
+                <p id="answer2_2" class="answer_section"></p>
+            </div>
+        </div>
+    </body>
+</html>

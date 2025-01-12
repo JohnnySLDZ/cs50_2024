@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <h2>Share of {{ info["name"] }}</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Current Price</th>
+            <th>Symbol</th>
+        </tr>
+        <tr>
+            <td>{{ info["name"] }}</td>
+            <td>{{info["price"]}}</td>
+            <td>{{info["symbol"]}}</td>
+        </tr>
+    </table>
+{% endblock %}

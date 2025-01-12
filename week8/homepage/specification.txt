@@ -1,0 +1,20 @@
+HTML tags:
+-<p>
+-<div>
+-<h1>
+-<h2>
+-<img>
+-<video>
+-<i>
+-<h5>
+-<iframe>
+-<a>
+CSS properties:
+-position: absolute;
+-top: 0;
+-left: 0;
+-width: 100%;
+-height: 100%;
+On my homepage, I implemented JavaScript for various interactive elements, such as an arrow to scroll down and 
+arrows to change the video in an iframe. I also used Bootstrap cards and icons to enhance the styling.
+

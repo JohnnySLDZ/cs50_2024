@@ -1,0 +1,17 @@
+sort1 uses: Bubble sort
+
+How do you know?: By timing the sort algorithms using only the reversed and sorted files, the difference in time between sorting the reversed5000 and reversed50000
+is quite notable. This suggests that the running time increases with the number of inputs. However, when sorting an already sorted file, the time span drops
+significantly. Based on this evidence, I can affirm that sort1 uses a Bubble Sort algorithm, with a Big O notation of O(n²) for the worst case and O(n) for the best case.
+
+sort2 uses: Merge sort
+
+How do you know?: With this program, the running time for reversed50000 compared to reversed5000 didn’t increase significantly, and the time for sorting an already
+sorted file was very close to that for the reversed ones. Based on this and the information from the other two sorting programs, I can affirm that sort2 uses a Merge
+Sort algorithm.
+
+sort3 uses: Selection sort
+
+How do you know?: In this program, the time for sorting reversed50000 increased in comparison to reversed5000, but not as much as in sort1. Sorting an already sorted
+file takes almost the same amount of time. Since both the worst and best case scenarios take nearly the same time, and the running time increases as the number of inputs
+grows, I can affirm that sort2 uses a Selection Sort algorithm.

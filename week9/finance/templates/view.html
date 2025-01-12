@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    View
+{% endblock %}
+
+{% block main %}
+    <h2>General View</h2>
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Amount Owed</th>
+            <th>Current Price</th>
+            <th>Total holding</th>
+        </tr>
+        {% for company in companies%}
+            <tr>
+                <td>{{ company["symbol"] }}</td>
+                <td>{{ company["amount"] }}</td>
+                <td>{{ company["price"] }}</td>
+                <td>{{ company["holding"] }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td></td>
+            <td></td>
+            <th>Cash</th>
+            <td>{{ cash }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <th>TOTAL</th>
+            <td>{{ total }}</td>
+        </tr>
+    </table>
+    <button><a class="nav-link" href="/cash">Add Cash</a></button>
+{% endblock %}
